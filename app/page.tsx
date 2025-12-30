@@ -132,9 +132,9 @@ export default function Home() {
               { 
                 day: 2, 
                 sessions: [
-                  { title: 'Security & Cryptography', topics: ['Public-Key Cryptography', 'Digital Signatures', 'Hash Functions'], link: '#', available: false },
-                  { title: 'Network Architecture', topics: ['P2P Networks', 'Node Communication', 'Block Propagation'], link: '#', available: false },
-                  { title: 'Mining & Validation', topics: ['Proof of Work', 'Proof of Stake', 'Block Validation'], link: '#', available: false }
+                  { title: 'Ethereum Architecture', topics: ['Ethereum Network', 'EVM', 'Gas Model and transaction lifecycle', 'Smart contracts and accounts'], link: '/d2-session-1', available: true },
+                  { title: 'Solidity Programming', topics: ['Contract structure', 'Data types', 'Functions, Mappings, Modifiers and Events'], link: '/d2-session-2', available: true },
+                  { title: 'Ethereum Smart Contract', topics: ['Write and Deploy Contract', 'Remix IDE & Contract Interaction', 'Student Registry/Asset Transfer'], link: '/d2-session-3', available: true }
                 ], 
                 color: 'cyan' 
               },
