@@ -6,19 +6,19 @@ import { Github, Twitter, Linkedin, Terminal, ArrowUpRight, Code2, Users, Heart 
 
 // --- TEAM CONFIGURATION ---
 const DEVELOPERS = [
-  { 
-    name: 'Taha Sindoli', 
-    role: 'Frontend Lead', 
-    url: 'https://tahasindoli.vercel.app/', 
-    initials: 'TS', 
+  {
+    name: 'Taha Sindoli',
+    role: 'Frontend Lead',
+    url: 'https://tahasindoli.vercel.app/',
+    initials: 'TS',
     color: 'bg-blue-600',
     border: 'group-hover:border-blue-500'
   },
-  { 
-    name: 'Anirudh', 
-    role: 'Fullstack Engineer', 
-    url: 'https://github.com/its-ME-007', 
-    initials: 'AN', 
+  {
+    name: 'Anirudh',
+    role: 'Fullstack Engineer',
+    url: 'https://github.com/its-ME-007',
+    initials: 'AN',
     color: 'bg-purple-600',
     border: 'group-hover:border-purple-500'
   },
@@ -28,15 +28,16 @@ const CONTRIBUTORS = [
   // Add actual contributor names here
   { name: 'Kavin', role: 'Day 1' },
   { name: 'Ishan', role: 'Day 2' },
+  { name: 'Dia Arora', role: 'Day 3', url: 'https://github.com/Dia-Arora' },
 ]
 
 // --- SUB-COMPONENTS ---
 
 const DevCard = ({ dev }: { dev: typeof DEVELOPERS[0] }) => (
-  <a 
-    href={dev.url} 
-    target="_blank" 
-    rel="noopener noreferrer" 
+  <a
+    href={dev.url}
+    target="_blank"
+    rel="noopener noreferrer"
     className={`group flex items-center gap-3 p-3 bg-neutral-900/30 border border-neutral-800 rounded-sm transition-all duration-300 hover:bg-neutral-900 ${dev.border}`}
   >
     <div className={`w-8 h-8 ${dev.color} flex items-center justify-center text-[10px] font-bold text-white tracking-widest shadow-lg`}>
@@ -66,7 +67,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="grid md:grid-cols-12 gap-12 md:gap-8">
-          
+
           {/* Brand Column (Span 4) */}
           <div className="md:col-span-4 space-y-8">
             <Link href="/">
@@ -85,7 +86,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed max-w-sm">
-              Open-source curriculum designed for the next generation of blockchain architects. 
+              Open-source curriculum designed for the next generation of blockchain architects.
               Built with rigorous engineering standards and technical depth.
             </p>
             <div className="flex gap-2">
@@ -112,8 +113,7 @@ export default function Footer() {
               {[
                 { label: 'Day 01: Genesis', href: '/d1-session-1' },
                 { label: 'Day 02: Contracts', href: '/d2-session-1' },
-                { label: 'Day 03: EVM Deep Dive', href: '#' },
-                { label: 'Day 04: Solana', href: '#' },
+                { label: 'Day 03: Solana', href: '/d3-session-1' },
               ].map((link, i) => (
                 <Link key={i} href={link.href}>
                   <span className="text-neutral-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-2 group">
@@ -144,7 +144,7 @@ export default function Footer() {
               <h4 className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                 <Users size={12} /> Engineering Team
               </h4>
-              
+
               {/* Lead Developers */}
               <div className="space-y-3 mb-6">
                 {DEVELOPERS.map((dev, i) => (
@@ -160,15 +160,21 @@ export default function Footer() {
                     <span className="text-[10px] font-mono uppercase tracking-widest">Contributors</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {CONTRIBUTORS.map((contributor, i) => (
-                      <span 
-                        key={i} 
-                        className="inline-flex items-center px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors cursor-default"
-                        title={`Contributed to: ${contributor.role}`}
-                      >
-                        {contributor.name}
-                      </span>
-                    ))}
+                    {CONTRIBUTORS.map((contributor, i) => {
+                      const Wrapper = (contributor as any).url ? 'a' : 'span';
+                      const props = (contributor as any).url ? { href: (contributor as any).url, target: '_blank', rel: 'noopener noreferrer' } : {};
+
+                      return (
+                        <Wrapper
+                          key={i}
+                          {...props}
+                          className={`inline-flex items-center px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors ${(contributor as any).url ? 'cursor-pointer hover:border-blue-500/30' : 'cursor-default'}`}
+                          title={`Contributed to: ${contributor.role}`}
+                        >
+                          {contributor.name}
+                        </Wrapper>
+                      )
+                    })}
                     <span className="inline-flex items-center px-2 py-1 text-[10px] text-neutral-600 font-mono italic">
                       + Community
                     </span>

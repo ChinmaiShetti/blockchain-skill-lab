@@ -6,61 +6,61 @@ import { ArrowRight, Terminal, Layers, Zap, Globe, Box, Lock } from 'lucide-reac
 import dynamic from 'next/dynamic'
 
 // DYNAMIC IMPORT
-const Hero3D = dynamic(() => import('@/components/Hero3D'), { 
+const Hero3D = dynamic(() => import('@/components/Hero3D'), {
   ssr: false,
-  loading: () => <div className="absolute inset-0 bg-black/0" /> 
+  loading: () => <div className="absolute inset-0 bg-black/0" />
 })
 
 // --- DATA SOURCE ---
 const CURRICULUM_DATA = [
-  { 
-    day: 1, 
+  {
+    day: 1,
     title: "Genesis Block",
     sessions: [
       { title: 'Foundations of Distributed Ledgers', topics: ['Distributed Ledgers', 'Blockchain Architecture', 'Cryptographic Hashing', 'Merkle Trees'], link: '/d1-session-1', available: true },
       { title: 'Platforms & Performance', topics: ['Ethereum Overview', 'Solana Architecture', 'Algorand Consensus', 'Performance Comparison'], link: '/d1-session-2', available: true },
       { title: 'Advanced Concepts', topics: ['Smart Contracts', 'Transaction Models', 'Consensus Mechanisms'], link: '#', available: false }
-    ], 
+    ],
     icon: <Box className="w-5 h-5" />
   },
-  { 
-    day: 2, 
+  {
+    day: 2,
     title: "Smart Contracts",
     sessions: [
       { title: 'Ethereum Architecture', topics: ['Ethereum Network', 'EVM', 'Gas Model and transaction lifecycle', 'Smart contracts and accounts'], link: '/d2-session-1', available: true },
       { title: 'Solidity Programming', topics: ['Contract structure', 'Data types', 'Functions, Mappings, Modifiers and Events'], link: '/d2-session-2', available: true },
       { title: 'Ethereum Smart Contract', topics: ['Write and Deploy Contract', 'Remix IDE & Contract Interaction', 'Student Registry/Asset Transfer'], link: '/d2-session-3', available: true }
-    ], 
+    ],
     icon: <Terminal className="w-5 h-5" />
   },
-    { 
-    day: 3, 
+  {
+    day: 3,
     title: "High Throughput",
     sessions: [
-      { title: 'Solana Architecture', topics: ['Proof of History', 'Parallel Processing', 'Program Development'], link: '#', available: false },
+      { title: 'Fundamentals of Solana', topics: ['Proof of History', 'Sealevel', 'Account Model', 'PDAs'], link: '/d3-session-1', available: true },
       { title: 'UTXO Model', topics: ['Bitcoin Architecture', 'Transaction Structure', 'Script System'], link: '#', available: false },
       { title: 'Layer 2 Solutions', topics: ['Lightning Network', 'Rollups', 'Sidechains'], link: '#', available: false }
-    ], 
+    ],
     icon: <Zap className="w-5 h-5" />
   },
-  { 
-    day: 4, 
+  {
+    day: 4,
     title: "EVM Deep Dive",
     sessions: [
       { title: 'Ethereum Deep Dive', topics: ['EVM Architecture', 'Gas & Fees', 'Account Model'], link: '/d4-session-1', available: true },
       { title: 'Smart Contract Development', topics: ['Solidity Basics', 'Contract Deployment', 'Testing'], link: '#', available: false },
       { title: 'DApp Development', topics: ['Web3.js', 'Frontend Integration', 'Wallet Connection'], link: '/d4-session-3', available: false }
-    ], 
+    ],
     icon: <Layers className="w-5 h-5" />
   },
-  { 
-    day: 5, 
+  {
+    day: 5,
     title: "Future Tech",
     sessions: [
       { title: 'Algorand Consensus', topics: ['Pure Proof of Stake', 'Byzantine Agreement', 'Fast Finality'], link: '#', available: false },
       { title: 'Cross-Chain Integration', topics: ['Bridges', 'Interoperability', 'Multi-Chain Apps'], link: '#', available: false },
       { title: 'Future of Blockchain', topics: ['Scalability Solutions', 'Privacy Tech', 'Industry Trends'], link: '#', available: false }
-    ], 
+    ],
     icon: <Globe className="w-5 h-5" />
   },
 ]
@@ -69,10 +69,10 @@ const CURRICULUM_DATA = [
 
 const SessionItem = ({ session, index }: { session: any, index: number }) => (
   <Link href={session.link} className={!session.available ? 'pointer-events-none' : ''}>
-    <motion.div 
+    <motion.div
       className={`group relative pl-4 border-l transition-all duration-200 py-3 mb-1
-        ${session.available 
-          ? 'border-neutral-800 hover:border-blue-600 hover:bg-neutral-900 cursor-pointer' 
+        ${session.available
+          ? 'border-neutral-800 hover:border-blue-600 hover:bg-neutral-900 cursor-pointer'
           : 'border-neutral-900 opacity-40 cursor-not-allowed'}`}
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: session.available ? 1 : 0.4, x: 0 }}
@@ -86,11 +86,11 @@ const SessionItem = ({ session, index }: { session: any, index: number }) => (
           <ArrowRight className="w-4 h-4 text-neutral-600 group-hover:text-blue-500 transition-colors" />
         )}
       </div>
-      
+
       <div className="flex flex-wrap gap-2 pr-4">
         {session.topics.map((topic: string, t: number) => (
-          <span 
-            key={t} 
+          <span
+            key={t}
             className="text-[10px] font-mono uppercase tracking-wide text-neutral-500 bg-neutral-900 px-2 py-1 rounded-sm border border-neutral-800"
           >
             {topic}
@@ -134,17 +134,17 @@ const DayCard = ({ data, index }: { data: any, index: number }) => {
         </div>
 
         <div className="mt-auto px-6 py-4 border-t border-neutral-800 bg-[#050505]">
-           {isAvailable ? (
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span className="text-[11px] font-mono font-semibold text-neutral-300 uppercase tracking-wider">Available Now</span>
-              </div>
-            ) : (
-              <div className="flex items-center gap-2">
-                <Lock className="w-3 h-3 text-neutral-600" />
-                <span className="text-[11px] font-mono font-medium text-neutral-600 uppercase tracking-wider">Locked</span>
-              </div>
-            )}
+          {isAvailable ? (
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-[11px] font-mono font-semibold text-neutral-300 uppercase tracking-wider">Available Now</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <Lock className="w-3 h-3 text-neutral-600" />
+              <span className="text-[11px] font-mono font-medium text-neutral-600 uppercase tracking-wider">Locked</span>
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -154,15 +154,15 @@ const DayCard = ({ data, index }: { data: any, index: number }) => {
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-blue-900 selection:text-white font-sans">
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex flex-col md:flex-row items-center px-4 md:px-6 overflow-hidden border-b border-neutral-900 pt-20 md:pt-0">
-        
+
         {/* 3D Visual Layer */}
         <Hero3D />
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full pt-4 md:pt-12 pointer-events-none"> 
-          
+        <div className="relative z-10 max-w-7xl mx-auto w-full pt-4 md:pt-12 pointer-events-none">
+
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -225,8 +225,8 @@ export default function Home() {
       {/* Curriculum Grid */}
       <section id="syllabus" className="relative py-24 px-4 md:px-6 bg-[#050505]">
         <div className="max-w-7xl mx-auto">
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
