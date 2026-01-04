@@ -80,10 +80,10 @@ export default function Navbar() {
                   
                   <div className="p-1">
                     {[
-                      { day: 1, sessions: 3, available: 2, path: '/d1-session-1' },
+                      { day: 1, sessions: 3, available: 3, path: '/d1-session-1' },
                       { day: 2, sessions: 3, available: 3, path: '/d2-session-1' },
                       { day: 3, sessions: 3, available: 3, path: '/d3-session-1' },
-                      { day: 4, sessions: 3, available: 1, path: '/d4-session-1' },
+                      { day: 4, sessions: 3, available: 3, path: '/d4-session-1' },
                       { day: 5, sessions: 3, available: 3, path: '/d5-session-1' }
                     ].map((item) => (
                       <Link key={item.day} href={item.path}>

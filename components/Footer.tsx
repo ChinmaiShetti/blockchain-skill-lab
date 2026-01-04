@@ -115,6 +115,8 @@ export default function Footer() {
                 { label: 'Day 01: Genesis', href: '/d1-session-1' },
                 { label: 'Day 02: Contracts', href: '/d2-session-1' },
                 { label: 'Day 03: Solana', href: '/d3-session-1' },
+                { label: 'Day 04: EVM Deep Dive', href: '/d4-session-1' },
+                { label: 'Day 05: Algorand', href: '/d5-session-1' },
               ].map((link, i) => (
                 <Link key={i} href={link.href}>
                   <span className="text-neutral-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-2 group">

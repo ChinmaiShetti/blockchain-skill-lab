@@ -336,7 +336,7 @@ export default function Session1() {
 
         {/* Navigation */}
         <motion.div className="flex justify-center" {...fadeInUp}>
-          <Link href="/session-2">
+          <Link href="/d1-session-2">
             <button className="group relative px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-neutral-200 transition-colors flex items-center gap-3 rounded-sm">
               <span>Next: Platforms</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

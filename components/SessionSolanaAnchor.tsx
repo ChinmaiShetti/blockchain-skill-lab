@@ -72,7 +72,7 @@ export default function SessionSolanaAnchor() {
         {/* Repo + branches */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">01</span>
+              <span className="text-4xl font-mono font-bold text-white">01</span>
             <h2 className="text-2xl font-bold tracking-tight">Repository & Branch Map</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -107,7 +107,7 @@ export default function SessionSolanaAnchor() {
         {/* Prereqs */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">02</span>
+              <span className="text-4xl font-mono font-bold text-white">02</span>
             <h2 className="text-2xl font-bold tracking-tight">Prerequisites & Checks</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-sm">
@@ -146,7 +146,7 @@ export default function SessionSolanaAnchor() {
         {/* Wallet & config */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">03</span>
+              <span className="text-4xl font-mono font-bold text-white">03</span>
             <h2 className="text-2xl font-bold tracking-tight">Solana CLI Wallet & Network</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -177,7 +177,7 @@ export default function SessionSolanaAnchor() {
         {/* Setup steps */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">04</span>
+              <span className="text-4xl font-mono font-bold text-white">04</span>
             <h2 className="text-2xl font-bold tracking-tight">Project Setup</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -207,7 +207,7 @@ export default function SessionSolanaAnchor() {
         {/* Versions */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">05</span>
+              <span className="text-4xl font-mono font-bold text-white">05</span>
             <h2 className="text-2xl font-bold tracking-tight">Program Versions</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -242,7 +242,7 @@ export default function SessionSolanaAnchor() {
         {/* Program ID reminder */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">06</span>
+              <span className="text-4xl font-mono font-bold text-white">06</span>
             <h2 className="text-2xl font-bold tracking-tight">Program ID Discipline</h2>
           </div>
           <div className="border border-red-900 bg-red-900/10 rounded-sm p-5 text-sm text-neutral-200 space-y-3">
@@ -261,7 +261,7 @@ export default function SessionSolanaAnchor() {
         {/* Testing */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">07</span>
+              <span className="text-4xl font-mono font-bold text-white">07</span>
             <h2 className="text-2xl font-bold tracking-tight">Run & Test</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -290,7 +290,7 @@ export default function SessionSolanaAnchor() {
         {/* Deploy */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">08</span>
+              <span className="text-4xl font-mono font-bold text-white">08</span>
             <h2 className="text-2xl font-bold tracking-tight">Deploy (optional)</h2>
           </div>
           <div className="border border-neutral-800 bg-[#0A0A0A] rounded-sm p-5 text-sm text-neutral-300 space-y-3">
@@ -304,7 +304,7 @@ export default function SessionSolanaAnchor() {
         {/* Common issues */}
         <motion.section className="mb-16" {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">09</span>
+              <span className="text-4xl font-mono font-bold text-white">09</span>
             <h2 className="text-2xl font-bold tracking-tight">Common Issues</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-sm">
@@ -331,7 +331,7 @@ export default function SessionSolanaAnchor() {
         {/* Outcomes */}
         <motion.section {...fadeIn}>
           <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-3">
-            <span className="text-4xl font-mono font-bold text-neutral-800">10</span>
+              <span className="text-4xl font-mono font-bold text-white">10</span>
             <h2 className="text-2xl font-bold tracking-tight">Learning Outcomes</h2>
           </div>
           <div className="border border-neutral-800 bg-[#050505] rounded-sm p-5 text-sm text-neutral-300 space-y-2">
