@@ -96,7 +96,7 @@ export default function Day3Session1() {
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="px-3 py-1 bg-purple-900/20 border border-purple-800 text-purple-400 text-xs font-mono uppercase tracking-widest rounded-sm">
-              Session 03.1
+              Session 04.1
             </div>
             <div className="h-px bg-neutral-800 flex-1"></div>
             <span className="text-neutral-500 text-xs font-mono uppercase tracking-widest">

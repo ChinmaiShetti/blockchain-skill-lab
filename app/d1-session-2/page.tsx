@@ -374,10 +374,10 @@ export default function Session2() {
 
         {/* Navigation */}
         <motion.div className="flex justify-center" {...fadeInUp}>
-          <Link href="/">
-            <button className="px-8 py-4 border border-neutral-700 text-neutral-300 font-bold text-sm uppercase tracking-wider hover:bg-neutral-900 transition-colors flex items-center gap-3 rounded-sm">
-              <ArrowRight className="w-4 h-4 rotate-180" />
-              <span>Return to Dashboard</span>
+          <Link href="/d1-session-3">
+            <button className="group relative px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-neutral-200 transition-colors flex items-center gap-3 rounded-sm">
+              <span>Next: Setup & Tooling</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
           </Link>
         </motion.div>

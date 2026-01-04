@@ -72,7 +72,7 @@ export default function SessionSolanaFundamentals() {
                 {/* Comparison / Why Solana */}
                 <motion.section className="mb-24" {...fadeInUp} viewport={{ once: true }}>
                     <div className="flex items-baseline gap-4 mb-8 border-b border-neutral-800 pb-4">
-                        <h2 className="text-lg font-bold font-mono text-neutral-500 uppercase tracking-widest">01 / Why Solana</h2>
+                        <h2 className="text-lg font-bold font-mono text-white uppercase tracking-widest">01 / Why Solana</h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
@@ -114,7 +114,7 @@ export default function SessionSolanaFundamentals() {
                 {/* Core Technologies */}
                 <motion.section className="mb-24 px-1" {...fadeInUp} viewport={{ once: true }}>
                     <div className="flex items-baseline gap-4 mb-12 border-b border-neutral-800 pb-4">
-                        <span className="text-4xl font-mono font-bold text-neutral-800">02</span>
+                        <span className="text-4xl font-mono font-bold text-white">02</span>
                         <h2 className="text-2xl font-bold tracking-tight">Core Technologies</h2>
                     </div>
 
@@ -279,7 +279,7 @@ export default function SessionSolanaFundamentals() {
                 {/* Account Model */}
                 <motion.section className="mb-24 group px-1" {...fadeInUp} viewport={{ once: true }}>
                     <div className="flex items-baseline gap-4 mb-8 border-b border-neutral-800 pb-4">
-                        <span className="text-4xl font-mono font-bold text-neutral-800">03</span>
+                        <span className="text-4xl font-mono font-bold text-white">03</span>
                         <h2 className="text-2xl font-bold tracking-tight">The Account Model</h2>
                     </div>
 
@@ -433,7 +433,7 @@ export default function SessionSolanaFundamentals() {
                         {/* Transaction Fees */}
                         <div>
                             <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-4">
-                                <span className="text-4xl font-mono font-bold text-neutral-800">04</span>
+                                <span className="text-4xl font-mono font-bold text-white">04</span>
                                 <h2 className="text-2xl font-bold tracking-tight">Transaction Fees</h2>
                             </div>
                             <p className="text-neutral-400 leading-relaxed mb-4">
@@ -454,7 +454,7 @@ export default function SessionSolanaFundamentals() {
                         {/* Real World Apps */}
                         <div>
                             <div className="flex items-baseline gap-4 mb-6 border-b border-neutral-800 pb-4">
-                                <span className="text-4xl font-mono font-bold text-neutral-800">05</span>
+                                <span className="text-4xl font-mono font-bold text-white">05</span>
                                 <h2 className="text-2xl font-bold tracking-tight">Real World Applications</h2>
                             </div>
                             <p className="text-neutral-400 leading-relaxed mb-4">
@@ -491,9 +491,9 @@ export default function SessionSolanaFundamentals() {
                             Back
                         </button>
                     </Link>
-                    <Link href="#">
+                    <Link href="/d3-session-2">
                         <button className="group relative px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider hover:bg-neutral-200 transition-colors flex items-center gap-3 rounded-sm">
-                            <span>Next: Coming Soon</span>
+                            <span>Next: Solana Development</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </button>
                     </Link>

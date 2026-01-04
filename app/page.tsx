@@ -19,7 +19,7 @@ const CURRICULUM_DATA = [
     sessions: [
       { title: 'Foundations of Distributed Ledgers', topics: ['Distributed Ledgers', 'Blockchain Architecture', 'Cryptographic Hashing', 'Merkle Trees'], link: '/d1-session-1', available: true },
       { title: 'Platforms & Performance', topics: ['Ethereum Overview', 'Solana Architecture', 'Algorand Consensus', 'Performance Comparison'], link: '/d1-session-2', available: true },
-      { title: 'Advanced Concepts', topics: ['Smart Contracts', 'Transaction Models', 'Consensus Mechanisms'], link: '#', available: false }
+      { title: 'Advanced Concepts', topics: ['Smart Contracts', 'Transaction Models', 'Consensus Mechanisms'], link: '/d1-session-3', available: true }
     ],
     icon: <Box className="w-5 h-5" />
   },
@@ -38,8 +38,8 @@ const CURRICULUM_DATA = [
     title: "High Throughput",
     sessions: [
       { title: 'Fundamentals of Solana', topics: ['Proof of History', 'Sealevel', 'Account Model', 'PDAs'], link: '/d3-session-1', available: true },
-      { title: 'UTXO Model', topics: ['Bitcoin Architecture', 'Transaction Structure', 'Script System'], link: '#', available: false },
-      { title: 'Layer 2 Solutions', topics: ['Lightning Network', 'Rollups', 'Sidechains'], link: '#', available: false }
+      { title: 'Solana Development', topics: ['Rust Snippets', 'Ownership & Borrowing', 'Practice Plan'], link: '/d3-session-2', available: true },
+      { title: 'Anchor Smart Contracts', topics: ['Branches (main/final)', 'Program IDs', 'Anchor Tests', 'Deploy'], link: '/d3-session-3', available: true }
     ],
     icon: <Zap className="w-5 h-5" />
   },
@@ -48,8 +48,8 @@ const CURRICULUM_DATA = [
     title: "EVM Deep Dive",
     sessions: [
       { title: 'Ethereum Deep Dive', topics: ['EVM Architecture', 'Gas & Fees', 'Account Model'], link: '/d4-session-1', available: true },
-      { title: 'Smart Contract Development', topics: ['Solidity Basics', 'Contract Deployment', 'Testing'], link: '#', available: false },
-      { title: 'DApp Development', topics: ['Web3.js', 'Frontend Integration', 'Wallet Connection'], link: '/d4-session-3', available: false }
+      { title: 'IPFS Storage', topics: ['Content Addressing', 'Pinning', 'CIDs'], link: '/d4-session-2', available: true },
+      { title: 'Ethereum + IPFS', topics: ['CID Registry', 'Frontend Flow', 'Best Practices'], link: '/d4-session-3', available: true }
     ],
     icon: <Layers className="w-5 h-5" />
   },
