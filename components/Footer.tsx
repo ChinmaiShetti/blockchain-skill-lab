@@ -26,10 +26,12 @@ const DEVELOPERS = [
 
 const CONTRIBUTORS = [
   // Add actual contributor names here
-  { name: 'Kavin', role: 'Day 1' },
+  { name: 'Kavin', role: 'Day 1', url: 'https://github.com/Kavin4cK' },
   { name: 'Ishan', role: 'Day 2' },
   { name: 'Dia Arora', role: 'Day 3', url: 'https://github.com/Dia-Arora' },
-  { name: 'Varun', role: 'Day 4', url: 'https://github.com/varunaditya27'}
+  { name: 'Varun', role: 'Day 4', url: 'https://github.com/varunaditya27'},
+  { name: 'Chinmai', role: 'Day 3', url: 'https://github.com/ChinmaiShetti', title: 'Contributed for Day 3' },
+  { name: 'Krupanka', role: 'Day 4', url: 'https://github.com/Krupanka22', title: 'Contributed for Day 4' }
 ]
 
 // --- SUB-COMPONENTS ---
@@ -172,7 +174,7 @@ export default function Footer() {
                           key={i}
                           {...props}
                           className={`inline-flex items-center px-2 py-1 bg-neutral-900 border border-neutral-800 rounded-sm text-[10px] text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors ${(contributor as any).url ? 'cursor-pointer hover:border-blue-500/30' : 'cursor-default'}`}
-                          title={`Contributed to: ${contributor.role}`}
+                          title={(contributor as any).title || `Contributed to: ${contributor.role}`}
                         >
                           {contributor.name}
                         </Wrapper>
